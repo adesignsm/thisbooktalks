@@ -20,25 +20,25 @@ const TheBuilders = () => {
             color: "#fff"
         },
         hexStudio: {
-            name: "HEX",
+            name: "HEX Web",
             link: "https://www.instagram.com/hexstudio.io",
             bgColour: "#0000FF",
             color: "#fff"
         },
         adrian: {
-            name: "Adrian",
+            name: "Adrian Curator",
             link: "https://www.instagram.com/augustusknightt",
             bgColour: "#000",
             color: "#fff"
         },
         mark: {
-            name: "Mark",
+            name: "Mark Designer",
             link: "https://www.instagram.com/_markemery",
             bgColour: "#202020",
             color: "#fff"
         },
         justin: {
-            name: "Justin",
+            name: "Justin Writer",
             link: "https://www.instagram.com/justinbayot",
             bgColour: "#000",
             color: "#fff"
@@ -121,8 +121,8 @@ const TheBuilders = () => {
             text.style.color = profile.color;
             
             setInterval(() => {
-                text.style.top = (ball.position.y -5) + "px";
-                text.style.left = (ball.position.x - 15) + "px";
+                text.style.top = (ball.position.y -15) + "px";
+                text.style.left = (ball.position.x - 19) + "px";
             }, 10);
 
             document.getElementById("canvas-holster").appendChild(text);
