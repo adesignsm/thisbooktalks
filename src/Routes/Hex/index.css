@@ -1,0 +1,29 @@
+#hex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100%;
+    background-color: #171514;
+}
+
+#hex-container .poster-container img {
+    width: 100vw;
+}
+
+#hex-container .next-page-button-container button {
+    width: 90vw;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #171514;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: x-large;
+    font-family: var(--body-font);
+}
+
+#hex-container .next-page-button-container button > a {
+    color: #fff;
+}
