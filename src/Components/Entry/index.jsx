@@ -16,9 +16,9 @@ const Zine = () => {
 
     useFrame(() => {
         if (zineRef.current) {
-            zineRef.current.rotation.y += 0.01;
+            zineRef.current.rotation.y += 0.015;
             if (zineRef.current.position.z < -0.1) {
-                zineRef.current.position.z += 0.015;
+                zineRef.current.position.z += 0.03;
             } else {
                 setTimeout(() => {
                     $("#entry-container").fadeOut(500);
