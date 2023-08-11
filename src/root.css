@@ -37,6 +37,7 @@ p {
     height: 100dvh;
     width: 100dvw;
     backdrop-filter: blur(10px);
+    z-index: 9999;
 }
 
 #nav-container ul {
@@ -55,6 +56,7 @@ p {
     font-family: var(--heading-font);
     font-size: medium;
     cursor: pointer;
+    z-index: 9999;
 }
 
 #close-menu {
@@ -62,4 +64,8 @@ p {
     font-size: medium;
     cursor: pointer;
     padding-left: 1rem;
+}
+
+footer {
+    text-align: center;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import $ from "jquery";
 
@@ -16,10 +16,21 @@ import RTF from "./Routes/RTF";
 import Hex from "./Routes/Hex";
 import Archive from "./Routes/Archive";
 import Credits from "./Routes/Credits";
+import TheBuilders from "./Routes/TheBuilders";
 
 import "./root.css";
 
 const App = () => {
+
+    const getRandomVibrantColor = () => {
+        const hue = Math.floor(Math.random() * 360);
+        const saturation = '80%'; 
+        const lightness = '50%';  
+        const color = `hsl(${hue}, ${saturation}, ${lightness})`;
+    
+        return color;
+    };
+
     const handleCloseMenu = () => {
         $("#nav-container").animate({
             left: "100dvw"
@@ -31,6 +42,10 @@ const App = () => {
             left: "0"
         }, 500);
     }
+
+    setInterval(() => {
+        document.getElementById("special-link").style.color = getRandomVibrantColor();
+    }, 1000);
 
     return (
         <>
@@ -52,6 +67,7 @@ const App = () => {
                             <li onClick={handleCloseMenu}><Link to="/hex">Hex</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/archive">Archive</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/credits">Credits</Link></li>
+                            <li onClick={handleCloseMenu}><Link id="special-link" to="/the-builders">The Builders</Link></li>
                         </ul>
                     </nav>
                 </div>
@@ -67,9 +83,13 @@ const App = () => {
                     <Route exact path="/archive" element={<Archive />}/>
                     <Route exact path="/credits" element={<Credits />}/>
                     <Route exact path="/hex" element={<Hex />}/>
+                    <Route exact path="/the-builders" element={<TheBuilders />}/>
                     <Route element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
+            <footer>
+                <p> Developed by <a href="https://www.instagram.com/hexstudio.io">hexstudio</a></p>
+            </footer>
         </>
     )
 }
