@@ -41,17 +41,17 @@ const App = () => {
                     <h1 id="close-menu" onClick={handleCloseMenu}> Close </h1>
                     <nav>
                         <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/air-plane-boys">Air Plane Boys</Link></li>
-                            <li><Link to="/friendsmas">Friendsmas</Link></li>
-                            <li><Link to="/lowercase">Lowercase</Link></li>
-                            <li><Link to="/community-country-club">Community Country Club</Link></li>
-                            <li><Link to="/marsha-and-tefrondon">Marsha and Tefrondon</Link></li>
-                            <li><Link to="/run-the-flex">Run the Flex</Link></li>
-                            <li><Link to="/xylk">Xylk</Link></li>
-                            <li><Link to="/hex">Hex</Link></li>
-                            <li><Link to="/archive">Archive</Link></li>
-                            <li><Link to="/credits">Credits</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/">Home</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/air-plane-boys">Air Plane Boys</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/friendsmas">Friendsmas</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/lowercase">Lowercase</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/community-country-club">Community Country Club</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/marsha-and-tefrondon">Marsha and Tefrondon</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/run-the-flex">Run the Flex</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/xylk">Xylk</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/hex">Hex</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/archive">Archive</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/credits">Credits</Link></li>
                         </ul>
                     </nav>
                 </div>
