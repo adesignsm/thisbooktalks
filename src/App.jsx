@@ -5,6 +5,7 @@ import $ from "jquery";
 import Entry from "./Components/Entry";
 
 import Home from "./Routes/Home";
+import GuestBook from "./Routes/GuestBook";
 import NotFound from "./Routes/NotFound";
 import APB from "./Routes/Episodes/APB";
 import Friendsmas from "./Routes/Episodes/Friendsmas";
@@ -57,6 +58,7 @@ const App = () => {
                     <nav>
                         <ul>
                             <li onClick={handleCloseMenu}><Link to="/">Home</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/guest-book">Guestbook</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/air-plane-boys">Air Plane Boys</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/friendsmas">Friendsmas</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/lowercase">Lowercase</Link></li>
@@ -73,6 +75,7 @@ const App = () => {
                 </div>
                 <Routes>
                     <Route exact path="/" element={<Home />} />
+                    <Route exact path="/guest-book" element={<GuestBook />} />
                     <Route exact path="/air-plane-boys" element={<APB />} />
                     <Route exact path="/friendsmas" element={<Friendsmas />} />
                     <Route exact path="/xylk" element={<Xylk />} />
