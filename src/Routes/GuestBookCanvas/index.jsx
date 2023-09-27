@@ -28,8 +28,6 @@ const GuestBookCanvas = () => {
     return () => {};
   }, []);
 
-  console.log(entries);
-
   return (
     <>
       <main id="guestbook-canvas-container">
