@@ -17,8 +17,81 @@
     padding: 1rem;
 }
 
-#guest-book-container #canvas-container {
-    height: 100vh;
+#guest-book-container #form-container {
+    height: auto;
     width: 90vw;
     padding-right: 2rem;
+}
+
+#guest-book-container #form-container form {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--heading-font);
+    padding: 1rem;
+    border: 3px solid #333;
+    border-radius: 15px;
+}
+
+#guest-book-container #form-container form > label {
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+#guest-book-container #form-container form > input {
+    font-size: 30px;
+    margin-bottom: 5vh;
+    border: 3px solid #333;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+#guest-book-container #form-container form > input:focus {
+    outline: none;
+}
+
+#guest-book-container #form-container form > button {
+    font-size: 30px;
+    border: 3px solid #333;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+
+#guest-book-container #form-container .avatar-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+#guest-book-container #form-container .avatar-options img {
+    width: 60px;
+    margin: 0.5rem;
+    border: 3px solid #333;
+    padding: 0.5rem;
+    border-radius: 100px;
+}
+
+#guest-book-container #form-container .color-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+#guest-book-container #form-container .color-options div {
+    width: 60px;
+    margin: 0.5rem;
+    border: 3px solid #333;
+    padding: 0.5rem;
+    border-radius: 100px;
+}
+
+.avatar-options.selected .avatar:not(.selected) {
+    opacity: 0.5;
+}
+
+.color-options.selected .color:not(.selected) {
+    opacity: 0.5;
 }

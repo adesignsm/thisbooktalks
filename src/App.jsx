@@ -6,6 +6,7 @@ import Entry from "./Components/Entry";
 
 import Home from "./Routes/Home";
 import GuestBook from "./Routes/GuestBook";
+import GuestBookCanvas from "./Routes/GuestBookCanvas";
 import NotFound from "./Routes/NotFound";
 import APB from "./Routes/Episodes/APB";
 import Friendsmas from "./Routes/Episodes/Friendsmas";
@@ -59,6 +60,7 @@ const App = () => {
                         <ul>
                             <li onClick={handleCloseMenu}><Link to="/">Home</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/guest-book">Guestbook</Link></li>
+                            <li onClick={handleCloseMenu}><Link to="/guest-book-canvas">Guestbook Canvas</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/air-plane-boys">Air Plane Boys</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/friendsmas">Friendsmas</Link></li>
                             <li onClick={handleCloseMenu}><Link to="/lowercase">Lowercase</Link></li>
@@ -76,6 +78,7 @@ const App = () => {
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/guest-book" element={<GuestBook />} />
+                    <Route exact path="/guest-book-canvas" element={<GuestBookCanvas />} />
                     <Route exact path="/air-plane-boys" element={<APB />} />
                     <Route exact path="/friendsmas" element={<Friendsmas />} />
                     <Route exact path="/xylk" element={<Xylk />} />
