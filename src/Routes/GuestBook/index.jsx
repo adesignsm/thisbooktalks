@@ -13,6 +13,9 @@ const GuestBook = () => {
     const [selectedAvatar, setSelectedAvatar] = useState("");
     const [avatarSelected, setAvatarSelected] = useState(false);
 
+    const [showSubmissionPrompt, setShowSubmissionPrompt] = useState(false);
+    const [showErrorPrompt, setShowErrorPrompt] = useState(false);
+
     const avatarOptions = [
         <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Simba" alt="avatar" />,
         <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Charlie" alt="avatar" />,
@@ -93,8 +96,10 @@ const GuestBook = () => {
                 setAvatarSelected(false);
                 setSelectedColor("");
                 setSelectedAvatar("");
+
+                setShowSubmissionPrompt(true);
             }).catch((err) => {
-                console.error(err);
+                setShowErrorPrompt(true);
             })
         }
     };
@@ -105,6 +110,13 @@ const GuestBook = () => {
                 <div className="title-container">
                     <h1> SIGN THE GUESTBOOK </h1>
                 </div>
+                {showSubmissionPrompt ? <div className="success-submission-container">
+                    <h1> Youre all booked in! </h1>
+                    <h4> 
+                        Take a look at the projector screen behind the bar to see your character or head on over to
+                        <a href="/guest-book-canvas"> the guestbook display page</a>
+                    </h4>
+                </div> : 
                 <div id="form-container">
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="nickname">Nickname:</label>
@@ -130,7 +142,16 @@ const GuestBook = () => {
 
                         <button type="submit">Submit</button>
                     </form>
-                </div>
+                </div>}
+                {showErrorPrompt && 
+                    <div className="error-submission-container">
+                        <h1> Uh oh, there was an error. </h1>
+                        <h4> 
+                            Please try again or wait for our website factory to take a look at things.
+                            You can check out other submissions here: <a href="/guest-book-canvas"> the guestbook display page</a>
+                        </h4>
+                    </div>
+                }
             </main>
         </>
     )

@@ -95,3 +95,35 @@
 .color-options.selected .color:not(.selected) {
     opacity: 0.5;
 }
+
+#guest-book-container .success-submission-container {
+    font-family: var(--heading-font);
+    text-align: center;
+    width: 90vw;
+    padding-right: 2rem;
+}
+
+#guest-book-container .success-submission-container h1 {
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+#guest-book-container .success-submission-container a {
+    color: #0000FF;
+}
+
+#guest-book-container .error-submission-container {
+    font-family: var(--heading-font);
+    text-align: center;
+    width: 90vw;
+    padding-right: 2rem;
+}
+
+#guest-book-container .error-submission-container h1 {
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+#guest-book-container .error-submission-container a {
+    color: #0000FF;
+}
