@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import $ from "jquery";
-
-import Entry from "./Components/Entry";
 
 import Home from "./Routes/Home";
 import GuestBook from "./Routes/GuestBook";
@@ -51,7 +49,6 @@ const App = () => {
 
     return (
         <>
-            <Entry />
             <BrowserRouter>
                 <h1 id="open-menu" onClick={handleOpenMenu}> Menu </h1>
                 <div id="nav-container">

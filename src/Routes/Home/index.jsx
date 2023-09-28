@@ -4,11 +4,14 @@ import INTRO_QUOTE from "../../Assets/Media/Home/intro_quote.png";
 import ISO_IMAGE from "../../Assets/Media/Home/iso_image.jpg";
 import ISO_QUOTE from "../../Assets/Media/Home/iso_quote.png";
 
+import Entry from "../../Components/Entry";
+
 import "./index.css";
 
 const Home = () => {
     return (
         <>
+            <Entry />
             <main id="home-container">
                 <div className="title-container">
                     <img className="title-cover" src={TITLE_COVER} />
