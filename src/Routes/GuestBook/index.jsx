@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { push, ref } from "firebase/database";
 import { db } from "../../firebase";
+import BadWordsFilter from "bad-words";
 
 import "./index.css";
 
@@ -15,6 +16,7 @@ import badge8 from "../../Assets/Media/GuestBookCanvas/Badges/badge_8.png";
 import badge9 from "../../Assets/Media/GuestBookCanvas/Badges/badge_9.png";
 
 const GuestBook = () => {
+    const filter = new BadWordsFilter();
     const [nickname, setNickname] = useState("");
 
     const [selectedColor, setSelectedColor] = useState("");
@@ -39,6 +41,12 @@ const GuestBook = () => {
 
     const handleNicknameChange = (e) => {
         setNickname(e.target.value);
+        const isProfane = filter.isProfane(e.target.value);
+        
+        if (isProfane) {
+            alert("Caught ya there! Hexstudio & BCT have faith in your naming prowess! Do better! 🌟")
+            setNickname("");
+        }
     };
 
     const handleColorSelect = (e) => {
