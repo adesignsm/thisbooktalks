@@ -77,7 +77,7 @@ const GuestBookCanvas = () => {
                 return (
                     <div id={`sprite-${index}`} key={index} className="sprite" style={spriteStyle}>
                         <img src={entry.avatar} />
-                        <p style={{color: entry.color}}> {entry.nickname} </p>
+                        <p style={{color: entry.color, padding: 0}}> {entry.nickname} </p>
                     </div>
                 )
             })}

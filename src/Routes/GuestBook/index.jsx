@@ -114,7 +114,7 @@ const GuestBook = () => {
                 {showSubmissionPrompt ? <div className="success-submission-container">
                     <h1> Youre all booked in! </h1>
                     <h4> 
-                        Take a look at the projector screen behind the bar to see your character or head on over to
+                        Take a look at the projector screen behind the bar to see your name & badge or head on over to
                         <a href="/guest-book-canvas"> the guestbook display page</a>
                     </h4>
                 </div> : 
