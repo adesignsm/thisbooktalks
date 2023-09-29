@@ -1,8 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { push, ref } from "firebase/database";
 import { db } from "../../firebase";
 
 import "./index.css";
+
+import badge1 from "../../Assets/Media/GuestBookCanvas/Badges/badge_1.png";
+import badge2 from "../../Assets/Media/GuestBookCanvas/Badges/badge_2.png";
+import badge3 from "../../Assets/Media/GuestBookCanvas/Badges/badge_3.png";
+import badge4 from "../../Assets/Media/GuestBookCanvas/Badges/badge_4.png";
+import badge5 from "../../Assets/Media/GuestBookCanvas/Badges/badge_5.png";
+import badge6 from "../../Assets/Media/GuestBookCanvas/Badges/badge_6.png";
+import badge7 from "../../Assets/Media/GuestBookCanvas/Badges/badge_7.png";
+import badge8 from "../../Assets/Media/GuestBookCanvas/Badges/badge_8.png";
+import badge9 from "../../Assets/Media/GuestBookCanvas/Badges/badge_9.png";
 
 const GuestBook = () => {
     const [nickname, setNickname] = useState("");
@@ -17,18 +27,9 @@ const GuestBook = () => {
     const [showErrorPrompt, setShowErrorPrompt] = useState(false);
 
     const avatarOptions = [
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Simba" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Charlie" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Harley" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Rocky" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Pumpkin" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Rascal" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Peanut" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Chloe" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Snickers" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Angel" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Max" alt="avatar" />,
-        <img src="https://api.dicebear.com/7.x/identicon/svg?seed=Casper" alt="avatar" />,
+        <img src={badge1} alt="avatar" />, <img src={badge2} alt="avatar" />, <img src={badge3} alt="avatar" />,
+        <img src={badge4} alt="avatar" />, <img src={badge5} alt="avatar" />, <img src={badge6} alt="avatar" />,
+        <img src={badge7} alt="avatar" />, <img src={badge8} alt="avatar" />, <img src={badge9} alt="avatar" />
     ];
 
     const colorOptions = [
@@ -131,7 +132,7 @@ const GuestBook = () => {
                             })}
                         </div>
 
-                        <label>Character:</label>
+                        <label>Badge:</label>
                         <div className={`avatar-options ${avatarSelected ? "selected" : ""}`} required>
                             {avatarOptions.map((avatar, index) => (
                                 <span key={index} className={`avatar ${selectedAvatar === avatar.props.src ? "selected" : ""}`} onClick={() => handleAvatarSelect(avatar)}>

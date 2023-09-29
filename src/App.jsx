@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import $ from "jquery";
 
@@ -21,6 +21,15 @@ import TheBuilders from "./Routes/TheBuilders";
 import "./root.css";
 
 const App = () => {
+    useEffect(() => {
+        if (window.location.href.indexOf("guest-book-canvas") >= 0) {
+            $("#open-menu").hide();
+            $("footer").hide();
+        } else {
+            $("#open-menu").show();
+            $("footer").show(); 
+        }
+    }, []);
 
     const getRandomVibrantColor = () => {
         const hue = Math.floor(Math.random() * 360);

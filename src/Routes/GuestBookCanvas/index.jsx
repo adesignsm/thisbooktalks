@@ -1,12 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { onValue, ref } from "firebase/database";
 import { db } from "../../firebase";
+import $ from "jquery";
 import rafSchd from "raf-schd";
 import "./index.css";
 
 const GuestBookCanvas = () => {
   const [entries, setEntries] = useState([]);
   const [spritePositions, setSpritePositions] = useState([]);
+
+  useEffect(() => {
+    $("#open-menu").hide();
+    $("footer").hide();
+  }, []);
 
   const updateSpritePositions = () => {
     setSpritePositions((prevPositions) =>
