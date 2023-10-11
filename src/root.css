@@ -16,6 +16,10 @@ body, html {
     overflow-x: hidden;
 }
 
+h1 {
+    letter-spacing: -5px;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -38,6 +42,7 @@ p {
     width: 100dvw;
     backdrop-filter: blur(10px);
     z-index: 9999;
+    overflow-y: scroll;
 }
 
 #nav-container ul {
@@ -68,4 +73,10 @@ p {
 
 footer {
     text-align: center;
+}
+
+#nav-container span, #nav-container .dropdown > li {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    cursor: pointer;
 }

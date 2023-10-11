@@ -1,0 +1,10 @@
+#flower-art-container {
+    position: relative;
+    width: 100dvw;
+    height: 90dvh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
